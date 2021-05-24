@@ -25,6 +25,7 @@
     For more information, please refer to <https://unlicense.org>
 */
 
+#include <time.h>
 #include <stdio.h>
 #include <errno.h>
 #include <unistd.h>
@@ -60,6 +61,8 @@ int main(int argc, char *argv[])
     const char *write_off;
     ssize_t avail_num, write_num, iter;
     float prob = DEFAULT_PROB;
+
+    srand(time(NULL));
 
     /* arguments */
     if (argc > 1)
